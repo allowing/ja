@@ -18,7 +18,6 @@ const paths = require('./paths');
 const getClientEnvironment = require('./env');
 const getCacheIdentifier = require('react-dev-utils/getCacheIdentifier');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -480,12 +479,6 @@ module.exports = {
         // Exclude URLs containing a dot, as they're likely a resource in
         // public/ and not a SPA route
         new RegExp('/[^/]+\\.[^/]+$'),
-      ],
-    }),
-
-    new CleanWebpackPlugin(paths.appBuild {
-      exclude: [
-        '.git',
       ],
     }),
   ],
