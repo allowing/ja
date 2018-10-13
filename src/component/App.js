@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Home';
-import Todo from './Todo';
+import Doc from './Doc';
 import About from './About';
 
 export default class App extends Component {
@@ -10,14 +9,8 @@ export default class App extends Component {
         return (
             <Router>
                 <>
-                    <div className="App">
-                        <Link to="/">Home</Link>
-                        <Link to="/todo">Todo</Link>
-                        <Link to="/about">关于</Link>
-                    </div>
-
                     <Route exact path="/" component={Home} />
-                    <Route path="/todo" component={Todo} />
+                    <Route path="/doc" component={Doc} />
                     <Route path="/about" component={About} />
                 </>
             </Router>
