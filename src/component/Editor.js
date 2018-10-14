@@ -10,6 +10,12 @@ export default @observer class Editor extends Component {
     }
 
     componentDidMount() {
+        window.MonacoEnvironment = {
+            getWorkerUrl(moduleId, label) {
+                return `${process.env.PUBLIC_URL}/service-worker.js`;
+            },
+        };
+
         monaco.editor.create(this.myRef.current, {
             value: [
                 'function x() {',
