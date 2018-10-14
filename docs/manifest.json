@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "思籁教案",
+  "name": "思籁教育出品的教案编写程序",
   "icons": [
     {
       "src": "favicon.ico",
