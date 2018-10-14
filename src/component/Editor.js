@@ -11,7 +11,7 @@ export default @observer class Editor extends Component {
 
     componentDidMount() {
         window.MonacoEnvironment = {
-            getWorkerUrl(moduleId, label) {
+            getWorkerUrl: function (moduleId, label) {
                 return `${process.env.PUBLIC_URL}/service-worker.js`;
             },
         };
