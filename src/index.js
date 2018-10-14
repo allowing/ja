@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 
 window.MonacoEnvironment = {
     getWorkerUrl(moduleId, label) {
-        return `${process.env.PUBLIC_URL}/service-worker.js`;
+        // return `${process.env.PUBLIC_URL}/service-worker.js`;
     },
 };
 
