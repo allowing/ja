@@ -11,12 +11,8 @@ export default @observer class Editor extends Component {
 
     componentDidMount() {
         monaco.editor.create(this.myRef.current, {
-            value: [
-                'function x() {',
-                '\tconsole.log("Hello world!");',
-                '}'
-            ].join('\n'),
-            language: 'javascript',
+            value: '(请用`markdown`语法编写内容)',
+            language: 'markdown',
         });
     }
 
