@@ -3,6 +3,8 @@ import { observer } from 'mobx-react';
 import * as monaco from 'monaco-editor';
 
 export default @observer class Editor extends Component {
+    editor = null;
+
     constructor(props) {
         super(props);
 
@@ -10,9 +12,14 @@ export default @observer class Editor extends Component {
     }
 
     componentDidMount() {
-        monaco.editor.create(this.myRef.current, {
+        this.editor = monaco.editor.create(this.myRef.current, {
             value: '(请用`markdown`语法编写内容)',
             language: 'markdown',
+            theme: 'vs-dark',
+        });
+
+        this.editor.onKeyDown((e) => {
+            e.preventDefault();
         });
     }
 
